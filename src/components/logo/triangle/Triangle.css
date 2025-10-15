@@ -1,0 +1,31 @@
+@property --fill-p {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 0%;
+}
+
+.clip-rect {
+    animation: draw-outline 1s linear forwards;
+}
+
+@keyframes draw-outline {
+
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+.shape-to-fill {
+    mask: linear-gradient(45deg, #000 var(--fill-p), transparent var(--fill-p));
+    animation: fill-wipe 1s linear 1s forwards;
+}
+
+@keyframes fill-wipe {
+    to {
+        --fill-p: 100%;
+    }
+}
