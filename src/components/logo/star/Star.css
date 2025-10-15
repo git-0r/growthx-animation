@@ -1,0 +1,35 @@
+.star-container {
+    width: 200px;
+    height: 100px;
+    position: relative;
+}
+
+.star-svg {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: center;
+    animation: move-star 2s ease-in-out forwards;
+}
+
+@keyframes move-star {
+
+    0% {
+        transform: translate(0, 0) scale(1) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    100% {
+        /* X movement: 100px (half container width) - 10px (half star width) = 90px
+      Y movement: 100px (full container height) - 20px (full star height) - 30px(extra space) = 50px
+    */
+        transform: translate(90px, 50px) scale(5) rotate(270deg);
+        opacity: 1;
+    }
+}
