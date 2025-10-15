@@ -1,5 +1,5 @@
-import Star from "../logo/Star";
-import Triangle from "../logo/Triangle";
+import Star from "../Logo/Star";
+import Triangle from "../Logo/Triangle";
 import "./ElevateAnimation.css";
 
 const ElevateAnimation = () => {
